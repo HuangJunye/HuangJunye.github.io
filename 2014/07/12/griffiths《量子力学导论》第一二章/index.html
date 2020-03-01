@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Griffiths《量子力学导论》第一二章 – Huang Junye – Quantum Developer Advocate at IBM Qiskit</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="上一周粗略地学习了David Griffiths的Introduction to Quantum Mechanics的第一第二章。和我之前浏览的初步印象一致，这本书公式很多，而且没有什么废话，精简的语言描述模型就进入推导，很对我的口味。
+书的第一章的主题是波函数，引出了薛定谔方程，简单介绍了系综诠释（Ensemble Interpretation/Statistical Interpretation）和统计学基础。接着讲了波函数的归一化、埃伦费斯特定理。最后还简单介绍了海森堡不确定性原理。
+
+这一章比较简单。统计学的数学语言比较陌生，但是没有很难。这一章的微积分还是很简单，大学微积分的水平就足以应付了。
+第二章的主题是不含时薛定谔方程。利用分离变量法，把波函数分离成含x的函数和含t的函数, 将含t的部分分离出来，包含在常数里，就得出不含时的薛定谔方程：
+
+本章剩下的内容都是把不含时薛定谔方程应用于不同势能函数求出不含时的波函数，进而求出含时的波函数：无限深方形阱、量子谐振子、自由粒子、Delta位势阱和有限深方形阱。
+这章的数学开始难起来了。大部分内容还是在大学微积分的范畴内，只是我当初学得不够踏实，而且一两年没怎么碰数学了，现在用起来有点吃力。推导过程中有用到傅里叶变换，没有学过，也不太懂。
+总的来说这两章还是读懂了，接下来要多点练习，把书上的推导过程都弄熟，多做点习题。
+" />
+    <meta property="og:description" content="上一周粗略地学习了David Griffiths的Introduction to Quantum Mechanics的第一第二章。和我之前浏览的初步印象一致，这本书公式很多，而且没有什么废话，精简的语言描述模型就进入推导，很对我的口味。
+书的第一章的主题是波函数，引出了薛定谔方程，简单介绍了系综诠释（Ensemble Interpretation/Statistical Interpretation）和统计学基础。接着讲了波函数的归一化、埃伦费斯特定理。最后还简单介绍了海森堡不确定性原理。
+
+这一章比较简单。统计学的数学语言比较陌生，但是没有很难。这一章的微积分还是很简单，大学微积分的水平就足以应付了。
+第二章的主题是不含时薛定谔方程。利用分离变量法，把波函数分离成含x的函数和含t的函数, 将含t的部分分离出来，包含在常数里，就得出不含时的薛定谔方程：
+
+本章剩下的内容都是把不含时薛定谔方程应用于不同势能函数求出不含时的波函数，进而求出含时的波函数：无限深方形阱、量子谐振子、自由粒子、Delta位势阱和有限深方形阱。
+这章的数学开始难起来了。大部分内容还是在大学微积分的范畴内，只是我当初学得不够踏实，而且一两年没怎么碰数学了，现在用起来有点吃力。推导过程中有用到傅里叶变换，没有学过，也不太懂。
+总的来说这两章还是读懂了，接下来要多点练习，把书上的推导过程都弄熟，多做点习题。
+" />
+    
+    <meta name="author" content="Huang Junye" />
+
+    
+    <meta property="og:title" content="Griffiths《量子力学导论》第一二章" />
+    <meta property="twitter:title" content="Griffiths《量子力学导论》第一二章" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Huang Junye - Quantum Developer Advocate at IBM Qiskit" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://github.com/huangjunye.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Huang Junye</a></h1>
+            <p class="site-description">Quantum Developer Advocate at IBM Qiskit</p>
+          </div>
+
+          <nav>
+            <a href="/blog/">Blog</a>
+            <a href="/events">Events</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Griffiths《量子力学导论》第一二章</h1>
+
+  <div class="entry">
+    <p>上一周粗略地学习了David Griffiths的Introduction to Quantum Mechanics的第一第二章。和我之前浏览的初步印象一致，这本书公式很多，而且没有什么废话，精简的语言描述模型就进入推导，很对我的口味。</p>
+<p>书的第一章的主题是<b>波函数</b>，引出了薛定谔方程，简单介绍了系综诠释（Ensemble Interpretation/Statistical Interpretation）和统计学基础。接着讲了波函数的归一化、埃伦费斯特定理。最后还简单介绍了海森堡不确定性原理。</p>
+<p><img src="/assets/equation?tex=%5C%5B+i%5Chbar+%5Cfrac%7B%5Cpartial%5CPsi%7D%7B%5Cpartial+t%7D+%3D+-+%5Cfrac%7B%5Chbar%5E2%7D%7B2m%7D+%5Cfrac%7B%5Cpartial%5E2%5CPsi%7D%7B%5Cpartial+x%5E2%7D+%2B+V%5CPsi+%5C%5D" alt="\[ i\hbar \frac{\partial\Psi}{\partial t} = - \frac{\hbar^2}{2m} \frac{\partial^2\Psi}{\partial x^2} + V\Psi \]" /></p>
+<p>这一章比较简单。统计学的数学语言比较陌生，但是没有很难。这一章的微积分还是很简单，大学微积分的水平就足以应付了。</p>
+<p>第二章的主题是<b>不含时薛定谔方程</b>。利用分离变量法，把波函数<img src="/assets/equation?tex=%5CPsi+%5Cleft%28+x+%2C+t+%5Cright%29" alt="\Psi \left( x , t \right)" />分离成含x的函数<img src="/assets/equation?tex=%5Cpsi+%5Cleft%28+x+%5Cright%29+" alt="\psi \left( x \right) " />和含t的函数<img src="/assets/equation?tex=%5Cvarphi+%5Cleft%28+t+%5Cright%29+" alt="\varphi \left( t \right) " />, 将含t的部分分离出来，包含在常数<img src="/assets/equation?tex=E+%3D+i%5Chbar%5Cfrac%7B1%7D%7B%5Cvarphi%7D+%5Cfrac%7Bd%5Cvarphi%7D%7Bd+t%7D" alt="E = i\hbar\frac{1}{\varphi} \frac{d\varphi}{d t}" />里，就得出不含时的薛定谔方程：</p>
+<p><img src="/assets/equation?tex=-+%5Cfrac%7B%5Chbar%5E2%7D%7B2m%7D+%5Cfrac%7Bd%5E2%5Cpsi%7D%7Bdx%5E2%7D+%2B+V%5Cpsi+%3D+E%5Cpsi" alt="- \frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + V\psi = E\psi" /></p>
+<p>本章剩下的内容都是把不含时薛定谔方程应用于不同势能函数<img src="/assets/equation?tex=V%28x%29" alt="V(x)" />求出不含时的波函数<img src="/assets/equation?tex=%5Cpsi+%5Cleft%28+x+%5Cright%29+" alt="\psi \left( x \right) " />，进而求出含时的波函数<img src="/assets/equation?tex=%5CPsi+%5Cleft%28+x+%2C+t+%5Cright%29" alt="\Psi \left( x , t \right)" />：无限深方形阱、量子谐振子、自由粒子、Delta位势阱和有限深方形阱。</p>
+<p>这章的数学开始难起来了。大部分内容还是在大学微积分的范畴内，只是我当初学得不够踏实，而且一两年没怎么碰数学了，现在用起来有点吃力。推导过程中有用到傅里叶变换，没有学过，也不太懂。</p>
+<p>总的来说这两章还是读懂了，接下来要多点练习，把书上的推导过程都弄熟，多做点习题。</p>
+
+  </div>
+
+  <div class="date">
+    Written on July 11, 2014
+  </div>
+
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'huangjunye';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:h.jun.ye@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/HuangJunye"><i class="svg-icon github"></i></a>
+
+
+
+
+<a href="https://www.twitter.com/HuangJunye"><i class="svg-icon twitter"></i></a>
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-52372886-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/2014/07/12/griffiths%e3%80%8a%e9%87%8f%e5%ad%90%e5%8a%9b%e5%ad%a6%e5%af%bc%e8%ae%ba%e3%80%8b%e7%ac%ac%e4%b8%80%e4%ba%8c%e7%ab%a0/',
+		  'title': 'Griffiths《量子力学导论》第一二章'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>

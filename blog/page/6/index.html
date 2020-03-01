@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Blog - Page 6 – Huang Junye – Quantum Developer Advocate at IBM Qiskit</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="Quantum Developer Advocate at IBM Qiskit">
+    <meta property="og:description" content="Quantum Developer Advocate at IBM Qiskit" />
+    
+    <meta name="author" content="Huang Junye" />
+
+    
+    <meta property="og:title" content="My Blog - Page 6" />
+    <meta property="twitter:title" content="My Blog - Page 6" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Huang Junye - Quantum Developer Advocate at IBM Qiskit" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://github.com/huangjunye.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Huang Junye</a></h1>
+            <p class="site-description">Quantum Developer Advocate at IBM Qiskit</p>
+          </div>
+
+          <nav>
+            <a href="/blog/">Blog</a>
+            <a href="/events">Events</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <!-- Just some nice to have styles for the pager buttons -->
+<style>
+  ul.pager { text-align: center; list-style: none; }
+  ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}
+</style>
+
+<div class="home">
+  
+  
+
+  <div class="posts">
+  
+    <article class="post">
+
+      <h1><a href="/2016/03/13/historic-moment-alphago-vs-lee-sedol/">Historic Moment: AlphaGo vs Lee Sedol</a></h1>
+
+      <div class="entry">
+        <p><img class="alignnone size-full wp-image-390" src="/assets/alphago-lee-sedol-game-3-demis-hassabis-lee-sedol-sergey-brin.jpg" alt="AlphaGo-Lee-Sedol-game-3-Demis-Hassabis-Lee-Sedol-Sergey-Brin.jpg" width="900" height="600" /></p>
+<p>This week has been really exciting for me. I can't believe that I can see a live match between human and computer for Go, very much like <a href="https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov">the historic chess match between Kasparov and IBM Deep Blue in 1997</a>. (I didn't watch this game; I was still in kindergarten) I just had a quick look at Deep Blue's wiki. AlphaGo is actually much more powerful in Go than Deep Blue was in chess.</p>
+<p>First, human intervention was needed for Deep Blue to modify the program between the games, to shore up the weaknesses revealed during the games. In the case of AlphaGo, Google claimed that the program remains the same throughout the match.</p>
+<p>Second, Deep Blue lost the first match (of 6 games) against Kasparov in 1996. It needed heavy upgrade to beat Kasparov with a margin: 3½:2½ in 1997, while for AlphaGo, it didn't give Lee Sedol a single chance to win so far (3:0 right now, the fourth game is ongoing at this moment) (Update: Lee Sedol just won the fourth game! So now the score is 3:1!)</p>
+<p>Deep Blue's strategy is "brute force". It uses strong computation power to calculate all the possible positions in many steps ahead. (It can evaluate 200 millions positions per second according to <a href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)">Wikipedia</a>) In June 1997, Deep Blue was the 259th most powerful supercomputer according to the TOP500 list, with 11.38 GFLOPs computation power. (I was checking how powerful is 11.38GFLOPS, and found out that it's only at the same level of iPhone 4s's CPU)</p>
+<p><img class="alignnone size-full wp-image-387" src="/assets/alphago.png" alt="AlphaGo.png" width="1064" height="1016" /></p>
+<p>Of course, almost 20 years later, AlphaGo uses much more powerful hardware than Deep Blue. It uses 1920 CPUs and 280 GPUs, that means it has computation power above 100TFLOPS. (assuming 50GFLPS per CPU). The 500th on TOP500 list in Nov 2015 has about 200TFLOPS computation power, so AlphaGo's hardware can probably be listed on TOP500 too. However, because of the complexity of Go, even with a 10000 times more powerful hardware, AlphaGo can't use "brute force" approach. According to the <a href="http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html">Nature paper</a> published by Google, AlphaGo combines Monte Carlo tree search algorithm with a policy network and a value network to play the game. The value network evaluate the positions, and the policy network selects the move. (I haven't read through the Nature paper yet, so I can't really explain how it works) By combining these two networks, AlphaGo can limit the number of searches to a few positions on the board and a few tens of steps ahead.</p>
+<p>Before writing this post, I was really amazed by the ability of AlphaGo to win against the strongest human Go player. But after knowing that this program needed so much work and innovations in the software and so much power on the hardware, I started to appreciate the power of human brain. There are still a lot of jobs that machine can't do, fortunately or unfortunately. But the future is clear: we will have much more powerful AI in our daily life. Our human need to co-evolve with them. Maybe one day in the future, we don't need to learn anything. Every single technical and professional job will be done by computer. Our job is to enjoy our life. But will we enjoy our life if we don't need to work? Will AI take over our world like Ghost in the Shell and Ultron from Avengers? Elon Musk CEO of Tesla Motor and SpaceX) and Sam Altman (President of Y combinator) <a href="http://www.wired.com/2015/12/elon-musks-billion-dollar-ai-plan-is-about-far-more-than-saving-the-world/">created a billion dollar not-for-profit organization called OpenAI</a> to prevent some companies or countries using AI to take over the world. That actually doesn't prevent AI <em>itself</em> from taking over the world though.</p>
+<p>Anyway, this series of game has generated a lot of attentions to AI and machine learning. It will inspire a lot of young people to learn AI and ML. It might also have attached the attentions of policy makers and funding agencies. Like someone said, AI has been pushed forward for 10 years in the last few days.</p>
+<p>There is one more game to enjoy on Tuesday. (in fact I can't really "enjoy" the game by watching it because I barely knows the rules of Go and played a few times in my life) Hope Lee Sedol can win one more time.</p>
+<p>&nbsp;</p>
+
+      </div>
+
+      <a href="/2016/03/13/historic-moment-alphago-vs-lee-sedol/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
+      <h1><a href="/2016/02/28/random-walk-to-physics/">Random Walk to Physics</a></h1>
+
+      <div class="entry">
+        <p>This is the second post in the blog. I think I should probably give a brief introduction of myself.</p>
+<p>I was born and raised in <a href="https://en.wikipedia.org/wiki/Qingyuan">Qingyuan</a>, a small city in the Guangdong Province in South China. After a brief staying (really brief, only 3 months) in <a href="https://en.wikipedia.org/wiki/South_China_University_of_Technology">South China University of Technology</a> (SCUT), I was awarded a scholarship to study in <a href="https://en.wikipedia.org/wiki/Nanyang_Technological_University">Nanyang Technological University</a> (NTU), Singapore.</p>
+<p>In SCUT, my major was materials science and engineering (MSE). I can't remember what really made me choose this particular major, but I was convinced by myself that the reason was because my favourite chemistry teacher once said in the class: materials is the future! I didn't understand really what MSE is. But I thought it sounds like an interesting combination of chemistry and physics, which are both my favourite subjects (and both I did pretty well in school too). When I got the scholarship to study in NTU, I had one chance to change my major. At that time I really loved programming, so I wanted to change to computer science. But I still loved chemistry and physics, so I put "materials engineering (the acronym should be ME, but usually ME refers to mechanical engineering, so I will keep MSE as the acronym", "computer science (CS)", "computer engineering (CE)" in my application form. Because materials engineering is not a very popular major, I got into MSE again.</p>
+<p>But soon after I stared my degree, I regretted it. Most courses in MSE need only memorisation, not  understanding and not reasoning. And I am particularly bad at memorisation. So I hated the courses and wanted to change my major to CS or CE. I had a lot of arguments with my mom and my uncle about switching my major. Both of them thought that MSE is a promising major, but too many people study in CS and CE, it will be difficult for me to find a job because I will not be able to distinguish myself among my peers. Even till now, I think they were completely wrong. Indeed there are more people studying in CS and CE than MSE, but there are also much more jobs available for CS, CE graduates than MSE! So at the end, MSE graduates are even more difficult to find jobs! But anyway, I didn't change my major, not because I didn't want to argue any more with my family, but because I loved one polymer course and thought maybe I could try MSE a bit longer than just one semester.</p>
+<p>After first year of my degree, I was really into 3D printing for a while. I did some research in 3D printing and later interned at a local 3D printing startup called <a href="http://pirate3d.com/">Pirate3D</a>. For sometime I wanted to quit research and join the gang of hackers and makers to start my own company. But for most of my life, I want to become a scientist, but I have never imagined becoming a "physicist". I did pretty well in physics in school. I could score full marks in physics every now and then. And I had the best score, 296 out of 300, in science (combination of physics, chemistry and biology) in my city for the National Entrance Exam (Gaokao, in pinyin). But I knew I wasn't good enough to become a physicist. Only geniuses can become physicists. In high school, I was also courageous enough to compare myself with Newton. I tried to invent Calculus at the age of 17. I believed Newton did the same at that age but obviously he did it much later. The age 17 probably came from the story of Gauss demonstrated <a href="https://en.wikipedia.org/wiki/Heptadecagon">heptadecagon</a> (polygon with 17 edges) as a <a href="https://en.wikipedia.org/wiki/Constructible_polygon">constructible polygon</a> at the age of 19. (The 17 comes from the polygon rather than the age of Gauss at that time, :)) But I failed miserably. I didn't even know what calculus is! I just knew it's useful to calculate area under the curve.</p>
+<p>So becoming a physicist never came into my mind, until I attended the <a href="http://www.ntu.edu.sg/ias/upcomingevents/OCPA8/Pages/default.aspx">OCPA8 International Conference </a>(OCPA stands for Overseas Chinese Physicists Association) in June 2014. I was quite frustrated in MSE research at that time. I thought all MSE research were labor intensive activity, were just mixing stuff and cooking them. (I still think so) I couldn't much intellectual pleasure in doing MSE research. Sometimes I even felt MSE research was not scientific because it needs a lot of luck to do well. (true for many engineering disciplines) But I met many smart and cool physicists in the OCPA8 conference. Some of them are in charge of large high energy facilities, like Daya Bay neutrino experiment (<a href="http://english.ihep.cas.cn/pe/staff/200909/t20090902_35275.html">Wang Yifang</a>), future high energy electron-electron collider with over 100km ring (<a href="http://sourcedb.ihep.cas.cn/yw/pl/sf/201306/t20130621_3879817.html">Gao Jie</a>), future fusion reactor tokamak (<a href="http://dsxt.ustc.edu.cn/zj_ywjs.asp?zzid=3517">Ye Minyou</a>, <a href="http://www.phy.pku.edu.cn/fsc/c40410.jsp">Wang Xiaogang</a>), etc. Some of them have heart moving stories in their road to becoming physicists (<a href="http://www.iop.cas.cn/rcjy/zgjgwry/?dir=zgjgwry&amp;t=detail&amp;id=409">Wu Lingan</a>, <a href="https://lecospa.ntu.edu.tw/person/w-y-pauchy-hwang/">W-Y. Pauchy Hwang</a>). I was particularly motivated by Prof Pauchy Hwang. He lost his right leg in a <a href="http://w3.tkgsh.tn.edu.tw/99s122/creative%20writing7.htm">car accident at the age of 10</a>. But despite the tragedy, he tried to study well and became a professor in National Taiwan University. However, about 10 years later, another tragedy happened to him. He had a stroke attack, and since then he has to stay in a wheelchair and he can't speak properly any more. But he still keep working on his physics research. I thought compare to his difficulties, my fear for physics is just like a piece of cake. If I love physics, I should at least give it a try.</p>
+<p>So I did my final year project on molecular dynamic simulation of the photosynthetic reaction center of a bacteria. Although I didn't learn much about physics by doing this project per se, but I was exposed to some spin boson models in the weekly group meetings. Later I found a professor in <a href="https://en.wikipedia.org/wiki/Centre_for_Quantum_Technologies">Centre for Quantum Technology</a> (CQT) in the <a href="https://en.wikipedia.org/wiki/National_University_of_Singapore">National University of Singapore</a> (NUS), and he agreed on taking me as a PhD student. However, my application was rejected, probably due to competitive selection and my poor physics background. So at the end, I found a temporary research assistant position at <a href="http://erian.ntu.edu.sg/Pages/Home.aspx">Energy Research Institute @ NTU</a> (ERI@N), to do research on a recent hot topic: <a href="https://en.wikipedia.org/wiki/Perovskite_solar_cell">perovskite solar cells</a>.</p>
+<p>At first I took this job as a temporary job just to feed myself, and meanwhile I studied more physics to prepare for next round of application. But after a while, I wanted to give up. Maybe physics is not for me and perovskite solar cell is a very promising topic that may bring me a lot of benefits. Indeed, I worked very hard and within a few months I got some interesting results to publish. The manuscript is almost ready for submission, and most of research work was done in October and November only! People in ERI@N start to appreciate my work and ability. Everything in my life is pointing to MSE again. But I don't feel secured. I don't feel happy. Somehow I feel this is not what I want. I did change my perspective on MSE research. Sometimes it can be fun and innovative. But most of the time is still cooking, and no reasoning, at least in ERI@N. I want more mental challenges and intellectual pleasures. I want to feel smart during and after PhD.</p>
+<p>About one month ago, I gave myself the last chance to try physics. I attended the <a href="http://www.ntu.edu.sg/ias/upcomingevents/ICTP/Pages/default.aspx">School on Quantum Information Processing</a> co-organised by the <a href="http://www.ntu.edu.sg/ias/Pages/default.aspx">Institute of Advanced Studies in NTU</a> and <a href="https://en.wikipedia.org/wiki/International_Centre_for_Theoretical_Physics">International Centre for Theoretical Physics</a>. I got the same feeling I had in the OCPA8 conference. I felt very excited and anxious. I felt that everybody in the room is smarter than me, more capable than me, and I want to be as smart as they are. I felt everything they do is cool and interesting and I also want to work on the same thing. After the first week, I decided to apply for CQT again. I approached a professor in CQT, Prof Kwek, who I have also contacted one year ago. He knows me quite well and try to persuade me that ERI@N is a good place to be and energy is a good field to work on because Singapore government just announced a huge research plan in which hundreds of millions of dollars will go into sustainability research in the next 5 years. And if I want to switch to physics, computational materials might be easier for me, rather than quantum information. I think his advices are very reasonable, but I still want to go to CQT. So he suggest me to publish a paper before I apply again to demonstrate my knowledge and ability to do research in physics. Publish a paper in three months! from scratch! from a non-physics major student! It's like the challenge for the famous Mandopop singer Jay Chou to write 10 hit songs in a week to put in his first album. He did it and he became a superstar. But, can I do the same? Let's witness this. I'll keep posting my progress in this blog.</p>
+<p>Prof Kwek suggested me to study in <a href="https://en.wikipedia.org/wiki/Quantum_walk">quantum random walk</a>. I found it also fit my journey to become a physicist, and hence it become the title for this post.</p>
+<p>&nbsp;</p>
+
+      </div>
+
+      <a href="/2016/02/28/random-walk-to-physics/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
+      <h1><a href="/2015/12/25/new-year-resolution-2016/">New Year Resolution 2016</a></h1>
+
+      <div class="entry">
+        <p>My new year resolution for 2016:</p>
+<ol>
+<li>write blog post at least once a month for my three blogs on Wordpress:
+<ol>
+<li>Personal blog: <a href="https://huangjunye.wordpress.com">Random walk in life</a></li>
+<li>Research blog: <a href="https://hjypv.wordpress.com">May the Sun be with you</a></li>
+<li>Travel blog: <a href="https://hjytravel.wordpress.com">朝花夕拾 Dawn Blossoms Plucked At Dusk</a></li>
+</ol>
+</li>
+<li>Learn Spanish
+<ol>
+<li>at least two hours per week for intensive learning</li>
+<li>watch Spanish TV series and movies</li>
+</ol>
+</li>
+<li>Read 12 books</li>
+</ol>
+<p>&nbsp;</p>
+
+      </div>
+
+      <a href="/2015/12/25/new-year-resolution-2016/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
+      <h1><a href="/2015/10/18/%e6%9d%a1%e6%9d%a1%e5%a4%a7%e9%81%93%e9%80%9a%e7%bd%97%e9%a9%ac/">条条大道通罗马</a></h1>
+
+      <div class="entry">
+        <p>这个专栏很久没有更新了。辗转又过了半年，我还没有放弃学术这条路。我在学校临时找了一份研究助手的工作，在研究最近很火的钙钛矿太阳能电池（perovskite solar cell）。</p>
+<p>一开始找到这份工作的时候，没有想得太多，拿到offer就接受了。当时去NUS物理系读博士的申请被拒，心情低落。同时，大概是想逃避申请被拒这个现实，想着放弃学术道路，突然想着创业，打算搞一个科研众筹的网站。刚开始还是蛮认真的，做了一些调研，还访问过一个博士后。后来渐渐发现，我对科研资金还没有足够深入的了解，还不够痛恨现存的资金分配方式，感觉创业的动力不足。另一方面，我又没有编程和网页设计的能力，也不知道能不能找到一个具有这种能力，又志同道合，想跟我一起创业的人。要是第一点，创业动力没有问题的话，后面两点应该是可以克服的。可是三点都不具备的话，估计没有多久就会遇到巨大的困难而放弃。于是，这份研究助手的工作正好可以给我提供一些时间和机会，慢慢想清楚我到底要不要读博士，如果要读博士的话，要读哪个方面；如果想创业，想在哪个领域什么方面创业；如果还是想搞科研众筹，这个研究助手的工作还是能给我提供一些渠道更深入地了解科研资金的问题。</p>
+<p>毕业以后，我放了一个非常长的假期，直到9月才开始工作。放假的时候也想了很多关于科研和创业的问题，始终没有什么突破性的进展。我觉得做实验要做很多机械重复低级的劳动，而做理论，我又缺乏扎实的基础，要找到一个愿意接受我的教授也不容易。而创业的话，如果是IT方面的创业，我缺乏重要的技能——编程。而我又不具备非常强大的领导能力，或者人力资源。如果是材料方面的创业，那更需要长时间的专研，所以大概还是要读个博士。9月工作以来，想得就更多了，慢慢觉得做实验也没有想象中得那么糟糕。做着做着，我就想起了当初选择材料工程专业的原因，也想清楚我想转去物理专业的理由。</p>
+<p>当初填报NTU专业志愿的时候，我填的是材料工程、计算机科学和计算机工程。计算机自然有其让人着迷之处，可是材料专业更令我着迷。因为学好了材料专业，你就能搞懂为什么钢比铁坚硬，为什么金属导电而（大部分）塑料不导电，为什么磁铁能够吸引铁而不能吸引铝。学好材料工程，你还可以创造各种各样的新型材料：形状记忆合金、防弹衣、触摸屏上广泛应用的透明导体（ITO\IGZO）等等。还记得材料导论的第一课上，老师跟我们讲，人类历史是以我们能掌握的材料技术而命名的：石器时代、青铜时代、铁器时代……每一次材料技术的重大突破都会大大提高生产力，进而改变社会结构，推动社会发展。在这个高度来看，材料工程确实让人热血沸腾。</p>
+<p>然而，材料工程专业本科的课程大多都是概念性的东西，还有不少需要死记硬背的东西，极少有深入理解，要进行计算的东西。在具体的科研方面，从我在日本和新加坡几年来断断续续的一些研究经历看来，大部分材料研究使用的研究办法都是相当原始的试错法（trial-and-error）和控制变量法。无论制造出这种材料使用的仪器、步骤和原理是多么的高大上，我们仍然只能靠猜，猜出某个变量可能是重要的，然后做一系列的实验，改变这个因素，然后用各种仪器去分析这些试样，试图得出一些结论。这种原始的研究方法，需要耗费大量人力物力。因为变量不是那么好控制的，同一批试样之间的区别，往往不只是你想要研究的那个变量之间的区别，还有各种各样因为实验步骤繁多、实验不够小心而引入的变量，使得最终的数据缺乏说服力。在我看来，好的科学家跟差得科学家的主要区别在于他们『抓住关键变量』和『控制好其他变量』的能力。『抓住关键变量』的能力大概来自于理论知识和研究经验，而『控制好其他变量』的能力来自于实操的经验。可是，难道除了试错和控制变量法意外，就没有其他做实验的办法吗？难道这世界上每个做实验的人都只能靠着不靠谱的know-how来进步吗？这是我很想搞懂的问题，或许这就是读博士需要搞懂的问题吧。</p>
+<p>当初想转理论物理专业，就是希望自己能学到更扎实的理论知识，来指导自己做实验。隐约记得钱学森在交通大学学完机械工程以后，到美国进修时，也是选择了偏理论的空气动力学。那时候他父亲得知他选报理论而不是工程，写信骂他：『空谈误国，实干兴邦。学好工程回国做贡献才是正道，学理论一点用处都没有。』（大意如此）钱学森回复说：『学理论是为了更好地做工程，回国才能做出更大的贡献。』不过，去年报考NUS物理系的时候越想越远了，觉得实验一毛不值，最终选了一个做量子计算的教授，跟材料差了十万八千里。现在想来，我最想学的，是凝聚态物理和相关的计算机模拟方法（Density Functional Theory之类的）。所以我目前的想法是一边做实验，一边学理论。如果能够找到一个愿意接收我的凝聚态物理教授的话就最好了，不然我就跟目前做研究助手的导师商量，看看能不能跟他做实验和理论计算结合的PhD。辗转一番，我还没有放弃理论物理，或许我不会完全做理论，但至少我会努力学习理论来指导我的实验。正所谓『条条大道通罗马』，想搞理论物理也有很多种途径，用自己喜欢的方式去做就好。</p>
+
+      </div>
+
+      <a href="/2015/10/18/%e6%9d%a1%e6%9d%a1%e5%a4%a7%e9%81%93%e9%80%9a%e7%bd%97%e9%a9%ac/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
+      <h1><a href="/2015/04/25/%e9%97%ae%e8%b7%af%e5%9c%a8%e4%bd%95%e6%96%b9/">问路在何方</a></h1>
+
+      <div class="entry">
+        <p>量子信息PhD的申请被拒，这两周想了好多好多，不知道前路究竟在何方。</p>
+<p>开了这个专栏就没写过几篇文章，一眨眼就快一年了。还记得去年6月参加那个全球华人物理学家大会，深受启发，<a href="https://kiraisblog.wordpress.com/2014/06/27/%e7%9c%9f%e7%9a%84%e8%a6%81%e4%b8%8a%e8%b7%af%e4%ba%86%e5%90%97%ef%bc%9f/">决定投身物理</a>。那确实不仅仅是心血来潮。后来我就自学量子力学，毕业设计选了材料学院唯一一个搞理论的教授，做了分子动力学，也算是跟理论物理擦点边吧。每周参加组会，听组里博士和博士后的汇报，渐渐熟悉了量子力学，起码不再畏惧。对于物理专业的人来说，量子力学根本就是一个入门的东西。比起量子场论和弦论，根本就像小孩子过家家一样。但对于我这个门外汉来说，量子力学一开始看起来的确是非常陌生，非常难懂，所以畏惧感的退去也不是一件容易的事。</p>
+<p>之后我也努力地找了好几个教授当博士导师。一开始在南洋理工大学找了一个做量子光学的教授。这个教授，斯坦福本科，MIT博士，耶鲁博士后，年轻有为。但是他看了我的简历，知道我不是物理本科，在面试的时候考了我阶梯算符。想起来还真的是很简单的问题，但那时候没怎么看量子力学，学过又忘掉了，没有答出来。他跟我说，“你要想跟我读博士，物理水平要跟物理本科生一样。做量子光学，其他可以不会，但量子力学和电动力学肯定要学好。”</p>
+<p>后来我去新加坡国立大学的量子科技中心（Centre for Quantume Technologies）找了好几位教授，最终选定了一位同时在牛津大学担任教职的教授。这位教授的研究很牛逼，才四十多岁，发表了超过400篇论文，引用数超过20000。他没有嫌弃我读材料的背景，同意我当他的博士生。可是这个量子科技中心跟一般的学院不一样，教授同意了还不一定可以录取。我2月投了申请，3月面试，就在两周前收到了录取通知：被拒。</p>
+<p>收到通知那天我就觉得自己傻了。当初竟然完全没有考虑Plan B，没有同时在申请其他学校其他教授，完全没有给自己留下一条后路。我至今不清楚申请被拒的理由。我想，大概是竞争激烈，我非物理本科的背景自然不利。就算我再怎么保证我会努力学物理，也比不过一个物理本科而且成绩还可能很优秀的学生。</p>
+<p>后来我又觉得，这次申请被拒或许是件好事。提交申请后，我想像了很多以后的科研生活。有时候觉得很兴奋，觉得自己可以做一些看起来很酷很牛逼的事。有时候又觉得读博士，特别是理论物理博士前途渺茫。我是冲着当教授的心思去的，可是这年头当教授也不容易。读完博士还得读一两期博士后，之后还不一定能到教授。即使是国内的大学，现在招聘的条件也是水涨船高。没有Top20的科研经验，几乎就去不了985，甚至连211都难上。</p>
+<p>即使在国外当上了助理教授，还得再奋斗几年才能升副教授，得到终身聘职。而且运气不好，能力不足，甚至对那个大学水土不服，一下子搞不出成绩，后果不堪设想。我本科四年，在我们学院听说过两个中国教授升不了副教授，被逼回中国了。一个去了南方科技大学，一个去了南京工业大学。这两个教授在回国以前就发表了好几十篇论文，上千引用数，不简单。但是这种水平的确是难以在南大待下去。学术这条路真的不好走，奋斗几十年，到了快四十岁还不得安稳。</p>
+<p>很久以前看过，昨天又看了一下这个问题<a href="http://www.zhihu.com/question/24308741">从事基础科学研究，前景很惨淡吗？</a>，深有感触。我想不懂为什么搞科研的代价那么高。新加坡还算不错，读博士的时候奖学金只比工作少一些，博士后教授工资也不低。但是在国内情况严峻，博士生津贴少得连吃饭都成问题，博士后教授工资也不高。教授都得靠搞外快赚钱。</p>
+<p>这几年接触了不少教授，水平高低不齐，但都有一个共同点：忙。忙得没有时间搞科研，没有时间指导学生。为什么那么忙？忙些什么？他们忙着到处开学术会议，忙着到处拉科研经费。教授真的应该把100%的精力放在这些上面吗？其实他们忙这些很有道理。参加学术会议可以找到人合作写论文，找到人引用自己发表的论文。拉科研经费更不用说，钱多科研产出自然就多。没钱的话请不到人买不到物品仪器，讲科研都是屁话。这是可悲的科研现状，不单止是中国，新加坡也是这样，我看美国乃至全球普遍都是这样。（至少工科是这样）可这种现状真的合理吗？如果这种状况不能改变，这还是我心目中的科学家工作吗？难道我辛辛苦苦奋斗二十年最终还不能好好专心搞科研，天天要在外面跑搞关系拉经费？</p>
+<p>有人说，如果你把爱好当成工作，你就不会再爱它了。我热爱科学，热爱物理，或许并不需要把它当成工作。或许我应该找一份自己擅长而且可以赚钱的工作，有空的时候多看科普书籍。如果真的想研究物理，抽点时间自学一下也可以。我发现真正让我感到兴奋的是粒子物理。每当我读到粒子物理的文章，心里总是感到热血沸腾，感觉自己了解到宇宙奥秘。可就像这个匿名答主（<a href="http://zhihu.com/question/24308741/answer/27390020">从事基础科学研究，前景很惨淡吗？</a>）在CERN读完博士后也是感到前途一片渺茫。我在Quora上问了<a href="http://www.quora.com/Is-funding-an-obstacle-for-science">Is funding an obstacle for science?</a> 第一个答主也是在CERN做科研，她说身边好多人读完博士、博士后以后还是顶不住生活压力（主要是收入低）跑去业界了。</p>
+<p>我需要一段时间去思考这些问题。我到底要不要读博士。如果读博士，到底要不要读物理。今天看到一个博客叫<a href="http://100rsns.blogspot.sg/">100 Reasons NOT to Go to Graduate School</a>，里面有接近一百篇文章叙述不读研的各种理由。或许我应该认真看看这博客，慢慢思考。</p>
+<p>可是我总觉得做科研不应该有那么高的代价。很多人都是很单纯地去追求学术的快乐。为什么我们就不能让他们单纯地快乐着？科研人员的工资应该和工程师相当，科研人员不应该浪费那么多时间拉经费，不应该为了晋升压力发表论文求量不求质。必须有人地站出来改变这个局面。这是我最近想得最多的问题。</p>
+<p>科研众筹或许是一个突破口。科研众筹可以让科研人员直接面向大众筹款。目前做的比较成功的网站是<a href="https://experiment.com/">Experiment</a>，我这里写了一个<a href="http://www.zhihu.com/question/28019320">关于科研众筹的答案</a>。目前项目平均筹款数不到5000美元，这跟几十上百万美元的科研经费相比根本是杯水车薪。这个网站做了3年注册用户也只有两万多人，捐款的人只有一万多，捐款超过一次的仅有八百多人。整个网站累计筹得160万美元，影响力有限。可是已经帮助了好几百个科研人员完成科研项目。如果模式做对了，能吸引到更多的人来捐款，说不定可以影响到整个科研界。目前Experiment只接受美国科学家的科研项目。如果我们把Experiment引进中国效果会是怎样呢？</p>
+<p>改变科研产出评估方式或许也是一个突破口。目前一个研究人员的科研产出靠简单的论文数和引用数来衡量，过于粗暴。每篇论文的重要性不一样，所以发表一篇重要论文可能比十篇一般的论文的价值更高。而论文的重要性如何衡量呢？目前的主流是引用数。可是引用数是否能准确衡量一篇沦为的重要性呢？一篇论文得到引用也不一定因为它很重要。同一个论点可以引好几篇不一样的论文，引你的还是引他的有时候还得看我跟谁关系好。而一篇论文被引用必须先被发表，被看到，而且引用到另一篇被发表的论文中，这个周期可能超过一年。或许我们可以引入其他参数来衡量科研产出？比如论文的浏览量，搜索量。比如说科研创造的工业产值等等。如果合理地科研产出评估方式得到大家公认，它可以引导科学家更加“健康地”做科研，而不是到处拉关系赶论文。</p>
+<p>我对科学的热爱或许不需要用来做研究。或许我可以开一家像Experiment的创业公司，解决科研人员的各种问题，改善科研人员的福利。</p>
+
+      </div>
+
+      <a href="/2015/04/25/%e9%97%ae%e8%b7%af%e5%9c%a8%e4%bd%95%e6%96%b9/" class="read-more">Read More</a>
+    </article>
+  
+</div>
+  
+  <!-- 
+    Showing buttons to move to the next and to the previous list of posts (pager buttons).
+  -->
+  
+  <ul class="pager">
+      
+      <li class="previous">
+          <a href="/blog/">First</a>
+      </li>
+      
+
+      
+        
+          <li >
+              <a href="/blog/page/3/index.html" title="My Blog - Page 3">3</a>
+          </li>
+        
+          <li >
+              <a href="/blog/page/4/index.html" title="My Blog - Page 4">4</a>
+          </li>
+        
+          <li >
+              <a href="/blog/page/5/index.html" title="My Blog - Page 5">5</a>
+          </li>
+        
+          <li class="selected">
+              <a href="/blog/page/6/index.html" title="My Blog - Page 6">6</a>
+          </li>
+        
+          <li >
+              <a href="/blog/page/7/index.html" title="My Blog - Page 7">7</a>
+          </li>
+        
+      
+
+       
+      <li class="previous">
+          <a href="/blog/page/7/">Last</a>
+      </li>
+      
+  </ul>
+  
+</div>
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:h.jun.ye@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/HuangJunye"><i class="svg-icon github"></i></a>
+
+
+
+
+<a href="https://www.twitter.com/HuangJunye"><i class="svg-icon twitter"></i></a>
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-52372886-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/blog/page/6/index.html',
+		  'title': 'My Blog - Page 6'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>

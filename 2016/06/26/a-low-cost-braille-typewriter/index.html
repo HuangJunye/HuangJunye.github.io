@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A low cost braille typewriter – Huang Junye – Quantum Developer Advocate at IBM Qiskit</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="This blogpost is inspired by Aaron Swartz, the Internet's own boy.
+For his short lifetime (26 years) on this planet, he had made so many technological and social contributions to the society, including RSS, Creative Commons, Markdown, and Open Access movement. I am going to be 24 years old in October this year, and yet I am practically nobody. Nobody, except some friends and family, will remember me if I die today. I have studied in schools for almost 20 years. I should have learnt enough knowledge and gained the ability to create some impacts to the society.
+Yes, I am going to start my PhD soon. And yes, if it goes well, it might be important. But I want to do something closer to normal people, not just some fancy 2D heterostructure devices. There is something I has really wanted to do for a while: a low cost braille typewriter/brailler.
+I went to teach in a primary school in Kenya 3 years ago during my summer break. That school has visually impaired students and the school is famous enough to have charity organization to donate braillers. However, there is still not enough braillers for every visually impaired student, because of a fucking Perskin brailler costs more than $700! A machine based on 20th century technology costs more than the most advanced smartphone in the world! This is absolutely insane! There got to be a way to cut down the cost. Here are my brief ideas:
+
+Replace complicated mechanical design by electronic circuits.
+Use 3D printers to print most of the parts to avoid huge fixed costs in traditional manufacturing methods.
+Find a way to type on cheap and easy-to-find normal paper instead of expensive braille paper.
+
+I am not sure about the reasons of the high cost. I assume it's because of the complicated mechanical design and huge fixed costs that cannot be reduced by economy-of-scale due to the small market. I need to verify all these assumptions before moving forward. A new mechanical design might be even cheaper and more reliable and no need power source.
+I have found a paper from 2001 by an Australian research group about an electronic design of brailler. It would be a good start point to make a brailler based on this design. One possible problem for electronic design is the need of power source, which could be a problem in extremely undeveloped regions. A combination of hand crank generator with a battery or supercapacitor is a possible solution.
+For the 3rd idea, I am not so sure about the problem. I have tried to use a pen to indent on a normal paper, and the indentation seems easy to touch (read) and rigid (won't be flatten easily).
+This brailler should look pretty much the same as a traditional brailler. The idea is to cut down the cost only, not to create a revolutionary next-generation brailler. There are many new innovations in braille industry, including braille display, braille ebook. But they are all extremely expensive and quite useless. For visually impaired people in rich countries, there are many ways for them to obtain information, radio, TV, audiobooks... Braille is quite useless. However, for those who lives in poor countries, braille might their only way of getting information. An affordable brailler will make much bigger impacts in these countries. More people can afford to buy one, schools can buy more braillers for students.
+These all sound great and reasonable, aren't they? Why isn't there already a cheap brailler on the market? The reason is exactly because no one in rich country cares about brailler any more. No one is going to buy a brailler and no market means no innovation. I haven't really started to work on it because I thought I can't make it and I didn't have time to make it until today i realised these are all excuses. I am going to start doing this thing from today. It will be my side project during PhD. I will devote my spare time to work on it. And I will make it open source. And if I really make it I will try to contact some organisations to support me for manufacturing or launch kickstarter campaign. It shouldn't just lie on my bedroom or on the Internet. It must create real impacts in the world.
+" />
+    <meta property="og:description" content="This blogpost is inspired by Aaron Swartz, the Internet's own boy.
+For his short lifetime (26 years) on this planet, he had made so many technological and social contributions to the society, including RSS, Creative Commons, Markdown, and Open Access movement. I am going to be 24 years old in October this year, and yet I am practically nobody. Nobody, except some friends and family, will remember me if I die today. I have studied in schools for almost 20 years. I should have learnt enough knowledge and gained the ability to create some impacts to the society.
+Yes, I am going to start my PhD soon. And yes, if it goes well, it might be important. But I want to do something closer to normal people, not just some fancy 2D heterostructure devices. There is something I has really wanted to do for a while: a low cost braille typewriter/brailler.
+I went to teach in a primary school in Kenya 3 years ago during my summer break. That school has visually impaired students and the school is famous enough to have charity organization to donate braillers. However, there is still not enough braillers for every visually impaired student, because of a fucking Perskin brailler costs more than $700! A machine based on 20th century technology costs more than the most advanced smartphone in the world! This is absolutely insane! There got to be a way to cut down the cost. Here are my brief ideas:
+
+Replace complicated mechanical design by electronic circuits.
+Use 3D printers to print most of the parts to avoid huge fixed costs in traditional manufacturing methods.
+Find a way to type on cheap and easy-to-find normal paper instead of expensive braille paper.
+
+I am not sure about the reasons of the high cost. I assume it's because of the complicated mechanical design and huge fixed costs that cannot be reduced by economy-of-scale due to the small market. I need to verify all these assumptions before moving forward. A new mechanical design might be even cheaper and more reliable and no need power source.
+I have found a paper from 2001 by an Australian research group about an electronic design of brailler. It would be a good start point to make a brailler based on this design. One possible problem for electronic design is the need of power source, which could be a problem in extremely undeveloped regions. A combination of hand crank generator with a battery or supercapacitor is a possible solution.
+For the 3rd idea, I am not so sure about the problem. I have tried to use a pen to indent on a normal paper, and the indentation seems easy to touch (read) and rigid (won't be flatten easily).
+This brailler should look pretty much the same as a traditional brailler. The idea is to cut down the cost only, not to create a revolutionary next-generation brailler. There are many new innovations in braille industry, including braille display, braille ebook. But they are all extremely expensive and quite useless. For visually impaired people in rich countries, there are many ways for them to obtain information, radio, TV, audiobooks... Braille is quite useless. However, for those who lives in poor countries, braille might their only way of getting information. An affordable brailler will make much bigger impacts in these countries. More people can afford to buy one, schools can buy more braillers for students.
+These all sound great and reasonable, aren't they? Why isn't there already a cheap brailler on the market? The reason is exactly because no one in rich country cares about brailler any more. No one is going to buy a brailler and no market means no innovation. I haven't really started to work on it because I thought I can't make it and I didn't have time to make it until today i realised these are all excuses. I am going to start doing this thing from today. It will be my side project during PhD. I will devote my spare time to work on it. And I will make it open source. And if I really make it I will try to contact some organisations to support me for manufacturing or launch kickstarter campaign. It shouldn't just lie on my bedroom or on the Internet. It must create real impacts in the world.
+" />
+    
+    <meta name="author" content="Huang Junye" />
+
+    
+    <meta property="og:title" content="A low cost braille typewriter" />
+    <meta property="twitter:title" content="A low cost braille typewriter" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Huang Junye - Quantum Developer Advocate at IBM Qiskit" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://github.com/huangjunye.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Huang Junye</a></h1>
+            <p class="site-description">Quantum Developer Advocate at IBM Qiskit</p>
+          </div>
+
+          <nav>
+            <a href="/blog/">Blog</a>
+            <a href="/events">Events</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>A low cost braille typewriter</h1>
+
+  <div class="entry">
+    <p>This blogpost is inspired by <a href="https://en.wikipedia.org/wiki/Aaron_Swartz">Aaron Swartz</a>, the Internet's own boy.</p>
+<p>For his short lifetime (26 years) on this planet, he had made so many technological and social contributions to the society, including RSS, Creative Commons, Markdown, and Open Access movement. I am going to be 24 years old in October this year, and yet I am practically nobody. Nobody, except some friends and family, will remember me if I die today. I have studied in schools for almost 20 years. I should have learnt enough knowledge and gained the ability to create some impacts to the society.</p>
+<p>Yes, I am going to start my PhD soon. And yes, if it goes well, it might be important. But I want to do something closer to normal people, not just some fancy 2D heterostructure devices. There is something I has really wanted to do for a while: a low cost <a href="https://en.wikipedia.org/wiki/Perkins_Brailler">braille typewriter/brailler</a>.</p>
+<p>I went to teach in a primary school in Kenya 3 years ago during my summer break. That school has visually impaired students and the school is famous enough to have charity organization to donate braillers. However, there is still not enough braillers for every visually impaired student, because of a fucking Perskin brailler costs more than $700! A machine based on 20th century technology costs more than the most advanced smartphone in the world! This is absolutely insane! There got to be a way to cut down the cost. Here are my brief ideas:</p>
+<ol>
+<li>Replace complicated mechanical design by electronic circuits.</li>
+<li>Use 3D printers to print most of the parts to avoid huge fixed costs in traditional manufacturing methods.</li>
+<li>Find a way to type on cheap and easy-to-find normal paper instead of expensive braille paper.</li>
+</ol>
+<p>I am not sure about the reasons of the high cost. I assume it's because of the complicated mechanical design and huge fixed costs that cannot be reduced by economy-of-scale due to the small market. I need to verify all these assumptions before moving forward. A new mechanical design might be even cheaper and more reliable and no need power source.</p>
+<p>I have found <a href="http://ieeexplore.ieee.org.ezlibproxy1.ntu.edu.sg/xpl/login.jsp?tp=&amp;arnumber=974067&amp;url=http%3A%2F%2Fieeexplore.ieee.org%2Fiel5%2F7681%2F20986%2F00974067.pdf%3Farnumber%3D974067">a paper</a> from 2001 by an Australian research group about an electronic design of brailler. It would be a good start point to make a brailler based on this design. One possible problem for electronic design is the need of power source, which could be a problem in extremely undeveloped regions. A combination of hand crank generator with a battery or supercapacitor is a possible solution.</p>
+<p>For the 3rd idea, I am not so sure about the problem. I have tried to use a pen to indent on a normal paper, and the indentation seems easy to touch (read) and rigid (won't be flatten easily).</p>
+<p>This brailler should look pretty much the same as a traditional brailler. The idea is to cut down the cost only, not to create a revolutionary next-generation brailler. There are many new innovations in braille industry, including <a href="https://en.wikipedia.org/wiki/Refreshable_braille_display">braille display</a>, <a href="https://en.wikipedia.org/wiki/Braille_e-book">braille ebook</a>. But they are all extremely expensive and quite useless. For visually impaired people in rich countries, there are many ways for them to obtain information, radio, TV, audiobooks... Braille is quite useless. However, for those who lives in poor countries, braille might their only way of getting information. An affordable brailler will make much bigger impacts in these countries. More people can afford to buy one, schools can buy more braillers for students.</p>
+<p>These all sound great and reasonable, aren't they? Why isn't there already a cheap brailler on the market? The reason is exactly because no one in rich country cares about brailler any more. No one is going to buy a brailler and no market means no innovation. I haven't really started to work on it because I thought I can't make it and I didn't have time to make it until today i realised these are all excuses. I am going to start doing this thing from today. It will be my side project during PhD. I will devote my spare time to work on it. And I will make it open source. And if I really make it I will try to contact some organisations to support me for manufacturing or launch kickstarter campaign. It shouldn't just lie on my bedroom or on the Internet. It must create real impacts in the world.</p>
+
+  </div>
+
+  <div class="date">
+    Written on June 26, 2016
+  </div>
+
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'huangjunye';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:h.jun.ye@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/HuangJunye"><i class="svg-icon github"></i></a>
+
+
+
+
+<a href="https://www.twitter.com/HuangJunye"><i class="svg-icon twitter"></i></a>
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-52372886-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/2016/06/26/a-low-cost-braille-typewriter/',
+		  'title': 'A low cost braille typewriter'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feynman Lectures Vol. I Chap. 1: Atoms in Motion – Huang Junye – Quantum Developer Advocate at IBM Qiskit</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="After attending Feynman 100 conference last week, I decided that I should start learning physics again from scratch. At first, I thought it would be a good idea to start from solid state physics. Because it is not too difficult for me, and it is relatively close to my experiments so that I can benefits from learning in a short time and that in turn can keep me motivated to learn. In addition, if I find some gaps in my understanding, I can easily read some chapters on fundamental theories (quantum mechanics, statistical mechanics, or electrodynamics, etc.) without digging too deep or spending too much time on them. On the other hand, learning solid state physics can also help me understanding more advanced concepts that are directly related to my experiments, such as superconductivity and spintronics. However, after reading a few pages of Feynman lectures, I knew that this is the book to start. I realised what I wanted to learn from physics is not only the physics knowledge itself, but also the physicist's way of thinking, or first-principle reasoning. For that, there is no better book than Feynman lectures. Just like what I learned from attending Feynman 100 conference (by the way, I still owe my readers an article about the conference, if anyone reads my blog, at all :P) and Youtube videos about Feynman, Feynman is a great teacher. He used the simplest words to explain physics. He really hated jargons. Reading Feynman lectures is a pure joy, because I feel I can think like Feynman, I feel smart! I spent about an hour everyday last week in the morning reading Feynman lectures. It was an enjoyable intellectual treat that I haven't had for a really long time. First time after a long while, probably after high school, I felt I could think clearly about some problems and started to question. This is a good start to train my first-principle reasoning. I didn't feel lazy to read the lectures; I actually looked forward to read them. Let's hope this will continue for a while, at least until Christmas? Let's don't be too ambitious. Do it step by step. My next goal to see my next summary/progress post next weekend.
+Progress Report Structure
+Because this is the first post of the series, I am going to say a few words about the structure of the progress report I have in mind. First, I will write a brief summary of the chapter. Then I will expand on a few concepts or problems that I found interesting depends on the time I have to think about the problems and/or the time I have to write about them.
+Summary of Chapter 1
+In the first chapter, Feynman discussed about his idea about teaching physics, which also reflects his view on physics in general. He discussed why we can't teach physics from basic axioms, why we need to first learn the simpler, "wrong" theory, before learning the more advanced, "right" theory. First, this is the history of physics. We first figured out classical theories to explain our everyday objects and then we figured out strange theories to explain puzzling experimental facts as our knowledge grew and the experimental techniques improved. We don't have the "correct" theory. It is important for students to realise that all theories are only approximations of the "truth". Therefore, it is a good idea to teach classical theories before teaching quantum theories. Another reason is that classical theories are easier to understand because we can understand them from our everyday experience. From there, we can build up our intuition and also our confidence in mathematic description of phenomena so that later on we can have some ground to rely on when things get very strange. In the second part, Feynman outlined our over-all picture of the world. In his opinion, the single most important concept in physics, or even in the entire field of science, is the atomic hypothesis that everything is made of atoms. He used water as an example to illustrate the power of the atomic hypothesis. He explained the different of atomic arrangement of the three phases of water: water, ice and vapour. We can easily understand why water expands in volume when it freezes to become ice: because ice has a hollow structure with a lot of empty space between the atoms. We can also understand why blowing a hot soup can cool it: we blow to move the water vapour on top of the soup so that it will keep evaporating and the evaporating vapour removes heat from the soup. Feynman carried on to explain dissolution and chemical reactions from atomic point of view. This chapter was wonderful. It stimulated me to think about many basic questions in science:
+
+Why do some substances dissolve less as the temperature increases? (retrograde solubility)
+Why does burning happen? Why do we need ignition to start a fire and how does burning continues after ignition? How are fire (plasma) and light generated from burning?
+How does nose sense smell?
+Why does Brownian motion happen?
+Is everything physical? How can we understand things like consciousness from a physical point of view?
+How to calculate the resolution limit of microscopes? How to calculate the diffraction limit and beat the diffraction limit?
+
+This week I only have time to dig into the first problem, retrograde solubility. I was particularly interested in this problem because I tried to understand it in high school when I was very good in chemistry and when I was still feeling powerful enough to understand the world by thinking by myself. I thought it would be rewarding to solve a little mystery that puzzled my arrogant young self.
+Retrograde solubility
+So, why do some substances dissolve less as the temperature increases? If you search on the internet, you will find an answer based on Le Chatelier principle. Le Chatelier principle tells you that, in a chemical equilibrium, when some changes happen, the system will adjust itself to reverse the change and reach a new equilibrium. Retrograde solubility is found in substances that produce heat when they dissolve, that is, the dissolution process is exothermal. So when the temperature increases, the solubility is reduced because the system want to reduce the heat of the system so as to resist the increase of temperature according to Le Chatelier principle. This is all very intuitive and satisfying but somehow I am not very happy about Le Chatelier principle. It's like Lenz law, Pauli exclusion principle or Hund's rule. These rules all sound like some words came up by some famous scientists. I won't believe them unless you give me proves! So I tried to understand the problem using elementary thermodynamics that I remember. An exothermal dissolution process means the enthalpy of dissolution is negative. (ΔH&lt;0) The fact that the substances can dissolve means dissolution lower the overall energy of the system, that is Gibbs free energy change is negative (ΔG &lt;0)
+$latex \Delta G = \Delta H - T \Delta S $
+If ΔS is positive, ΔG become more negative when temperature increases, which means dissolution is more preferred so the solubility increases. Otherwise, if ΔS is negative, the solubility decreases. Put it more formally. In a simple dissolution chemical reaction
+$latex AB=A^{+} + B^{-}$
+$latex \Delta G = -RT ln K $ where $latex K=[A^+][B^-]$
+$latex \partial (\Delta G) / \partial T = -R ln K = - \Delta S $
+When ΔS &lt; 0, ΔG increases with temperature, K decreases and so do the concentration of A+ and B-. If ΔH &gt; 0, that is the dissolution absorbs heat, then ΔG is positive when ΔS is negative, in which case dissolution won't happen. Therefore, retrograde solubility only happens when dissolution produces heat. But exothermal dissolution is a necessary condition, not a sufficient condition. For retrograde solubility to happen, we need ΔH &lt; 0 and ΔS &lt; 0. How is it possible that the entropy reduces after dissolution? Entropy is a measure of disorder. A reduction of entropy after dissolution suggests that A+ and B- forms a more ordered structure with the solvent than in the solute A-B form.
+For this part, I haven't found a definite answer. But it seems many sulphates ($latex SO_{4}^{2-}$) and selenates ($latex SeO_{4}^{2-}$) have retrograde solubilities. Sulphur and selenium lie in the same column of the periodic table, so it is understandable that sulphates and selenates have similar properties. I guess somehow $latex SO_{4}^{2-}$ and $latex SeO_{4}^{2-}$ can form large complexes with water molecules. The bonds have large energy combining with high coordination number produce more energy than the energy needed to break $latex SO_{4}^{2-}$ with the cations. And the large $latex H_2 O$ complexes somehow have more organised structure than in the sulphates which reduces the entropy as well. To get a more concrete answer, I will need to dig deeper in the literature. For now, I will stop the analysis here.
+Here is an incomplete list of salts with retrograde solubility according to solubility table on Wikipedia.
+$latex Ca(CH_3 COOH)_2, CaCrO_4, Ca(OH)_2, CaSeO_4, CaSO_4, Ce_2(SeO_4)_3$
+$latex Co(IO_3)_2 \cdot 2H_2 O, Er_2 (SO_4)_3 \cdot 8 H_2 O, Gd_2 (SO_4)_3, Ho_2 (SO_4)_3 \cdot 8H_2O, La_2 (SO_4)_3$
+$latex  LI_2 CO_3, Li_2SeO_3, Li_2 C_4 H_4 O_6, MnSO_4, Nd_2 (SeO_4)_3, Pr_2 (SO_4)_3, Yb_2 (SO_4)_3, Y_2 (SO_4)_3 $
+" />
+    <meta property="og:description" content="After attending Feynman 100 conference last week, I decided that I should start learning physics again from scratch. At first, I thought it would be a good idea to start from solid state physics. Because it is not too difficult for me, and it is relatively close to my experiments so that I can benefits from learning in a short time and that in turn can keep me motivated to learn. In addition, if I find some gaps in my understanding, I can easily read some chapters on fundamental theories (quantum mechanics, statistical mechanics, or electrodynamics, etc.) without digging too deep or spending too much time on them. On the other hand, learning solid state physics can also help me understanding more advanced concepts that are directly related to my experiments, such as superconductivity and spintronics. However, after reading a few pages of Feynman lectures, I knew that this is the book to start. I realised what I wanted to learn from physics is not only the physics knowledge itself, but also the physicist's way of thinking, or first-principle reasoning. For that, there is no better book than Feynman lectures. Just like what I learned from attending Feynman 100 conference (by the way, I still owe my readers an article about the conference, if anyone reads my blog, at all :P) and Youtube videos about Feynman, Feynman is a great teacher. He used the simplest words to explain physics. He really hated jargons. Reading Feynman lectures is a pure joy, because I feel I can think like Feynman, I feel smart! I spent about an hour everyday last week in the morning reading Feynman lectures. It was an enjoyable intellectual treat that I haven't had for a really long time. First time after a long while, probably after high school, I felt I could think clearly about some problems and started to question. This is a good start to train my first-principle reasoning. I didn't feel lazy to read the lectures; I actually looked forward to read them. Let's hope this will continue for a while, at least until Christmas? Let's don't be too ambitious. Do it step by step. My next goal to see my next summary/progress post next weekend.
+Progress Report Structure
+Because this is the first post of the series, I am going to say a few words about the structure of the progress report I have in mind. First, I will write a brief summary of the chapter. Then I will expand on a few concepts or problems that I found interesting depends on the time I have to think about the problems and/or the time I have to write about them.
+Summary of Chapter 1
+In the first chapter, Feynman discussed about his idea about teaching physics, which also reflects his view on physics in general. He discussed why we can't teach physics from basic axioms, why we need to first learn the simpler, "wrong" theory, before learning the more advanced, "right" theory. First, this is the history of physics. We first figured out classical theories to explain our everyday objects and then we figured out strange theories to explain puzzling experimental facts as our knowledge grew and the experimental techniques improved. We don't have the "correct" theory. It is important for students to realise that all theories are only approximations of the "truth". Therefore, it is a good idea to teach classical theories before teaching quantum theories. Another reason is that classical theories are easier to understand because we can understand them from our everyday experience. From there, we can build up our intuition and also our confidence in mathematic description of phenomena so that later on we can have some ground to rely on when things get very strange. In the second part, Feynman outlined our over-all picture of the world. In his opinion, the single most important concept in physics, or even in the entire field of science, is the atomic hypothesis that everything is made of atoms. He used water as an example to illustrate the power of the atomic hypothesis. He explained the different of atomic arrangement of the three phases of water: water, ice and vapour. We can easily understand why water expands in volume when it freezes to become ice: because ice has a hollow structure with a lot of empty space between the atoms. We can also understand why blowing a hot soup can cool it: we blow to move the water vapour on top of the soup so that it will keep evaporating and the evaporating vapour removes heat from the soup. Feynman carried on to explain dissolution and chemical reactions from atomic point of view. This chapter was wonderful. It stimulated me to think about many basic questions in science:
+
+Why do some substances dissolve less as the temperature increases? (retrograde solubility)
+Why does burning happen? Why do we need ignition to start a fire and how does burning continues after ignition? How are fire (plasma) and light generated from burning?
+How does nose sense smell?
+Why does Brownian motion happen?
+Is everything physical? How can we understand things like consciousness from a physical point of view?
+How to calculate the resolution limit of microscopes? How to calculate the diffraction limit and beat the diffraction limit?
+
+This week I only have time to dig into the first problem, retrograde solubility. I was particularly interested in this problem because I tried to understand it in high school when I was very good in chemistry and when I was still feeling powerful enough to understand the world by thinking by myself. I thought it would be rewarding to solve a little mystery that puzzled my arrogant young self.
+Retrograde solubility
+So, why do some substances dissolve less as the temperature increases? If you search on the internet, you will find an answer based on Le Chatelier principle. Le Chatelier principle tells you that, in a chemical equilibrium, when some changes happen, the system will adjust itself to reverse the change and reach a new equilibrium. Retrograde solubility is found in substances that produce heat when they dissolve, that is, the dissolution process is exothermal. So when the temperature increases, the solubility is reduced because the system want to reduce the heat of the system so as to resist the increase of temperature according to Le Chatelier principle. This is all very intuitive and satisfying but somehow I am not very happy about Le Chatelier principle. It's like Lenz law, Pauli exclusion principle or Hund's rule. These rules all sound like some words came up by some famous scientists. I won't believe them unless you give me proves! So I tried to understand the problem using elementary thermodynamics that I remember. An exothermal dissolution process means the enthalpy of dissolution is negative. (ΔH&lt;0) The fact that the substances can dissolve means dissolution lower the overall energy of the system, that is Gibbs free energy change is negative (ΔG &lt;0)
+$latex \Delta G = \Delta H - T \Delta S $
+If ΔS is positive, ΔG become more negative when temperature increases, which means dissolution is more preferred so the solubility increases. Otherwise, if ΔS is negative, the solubility decreases. Put it more formally. In a simple dissolution chemical reaction
+$latex AB=A^{+} + B^{-}$
+$latex \Delta G = -RT ln K $ where $latex K=[A^+][B^-]$
+$latex \partial (\Delta G) / \partial T = -R ln K = - \Delta S $
+When ΔS &lt; 0, ΔG increases with temperature, K decreases and so do the concentration of A+ and B-. If ΔH &gt; 0, that is the dissolution absorbs heat, then ΔG is positive when ΔS is negative, in which case dissolution won't happen. Therefore, retrograde solubility only happens when dissolution produces heat. But exothermal dissolution is a necessary condition, not a sufficient condition. For retrograde solubility to happen, we need ΔH &lt; 0 and ΔS &lt; 0. How is it possible that the entropy reduces after dissolution? Entropy is a measure of disorder. A reduction of entropy after dissolution suggests that A+ and B- forms a more ordered structure with the solvent than in the solute A-B form.
+For this part, I haven't found a definite answer. But it seems many sulphates ($latex SO_{4}^{2-}$) and selenates ($latex SeO_{4}^{2-}$) have retrograde solubilities. Sulphur and selenium lie in the same column of the periodic table, so it is understandable that sulphates and selenates have similar properties. I guess somehow $latex SO_{4}^{2-}$ and $latex SeO_{4}^{2-}$ can form large complexes with water molecules. The bonds have large energy combining with high coordination number produce more energy than the energy needed to break $latex SO_{4}^{2-}$ with the cations. And the large $latex H_2 O$ complexes somehow have more organised structure than in the sulphates which reduces the entropy as well. To get a more concrete answer, I will need to dig deeper in the literature. For now, I will stop the analysis here.
+Here is an incomplete list of salts with retrograde solubility according to solubility table on Wikipedia.
+$latex Ca(CH_3 COOH)_2, CaCrO_4, Ca(OH)_2, CaSeO_4, CaSO_4, Ce_2(SeO_4)_3$
+$latex Co(IO_3)_2 \cdot 2H_2 O, Er_2 (SO_4)_3 \cdot 8 H_2 O, Gd_2 (SO_4)_3, Ho_2 (SO_4)_3 \cdot 8H_2O, La_2 (SO_4)_3$
+$latex  LI_2 CO_3, Li_2SeO_3, Li_2 C_4 H_4 O_6, MnSO_4, Nd_2 (SeO_4)_3, Pr_2 (SO_4)_3, Yb_2 (SO_4)_3, Y_2 (SO_4)_3 $
+" />
+    
+    <meta name="author" content="Huang Junye" />
+
+    
+    <meta property="og:title" content="Feynman Lectures Vol. I Chap. 1: Atoms in Motion" />
+    <meta property="twitter:title" content="Feynman Lectures Vol. I Chap. 1: Atoms in Motion" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Huang Junye - Quantum Developer Advocate at IBM Qiskit" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://github.com/huangjunye.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Huang Junye</a></h1>
+            <p class="site-description">Quantum Developer Advocate at IBM Qiskit</p>
+          </div>
+
+          <nav>
+            <a href="/blog/">Blog</a>
+            <a href="/events">Events</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Feynman Lectures Vol. I Chap. 1: Atoms in Motion</h1>
+
+  <div class="entry">
+    <p>After attending Feynman 100 conference last week, I decided that I should start learning physics again from scratch. At first, I thought it would be a good idea to start from solid state physics. Because it is not too difficult for me, and it is relatively close to my experiments so that I can benefits from learning in a short time and that in turn can keep me motivated to learn. In addition, if I find some gaps in my understanding, I can easily read some chapters on fundamental theories (quantum mechanics, statistical mechanics, or electrodynamics, etc.) without digging too deep or spending too much time on them. On the other hand, learning solid state physics can also help me understanding more advanced concepts that are directly related to my experiments, such as superconductivity and spintronics. However, after reading a few pages of Feynman lectures, I knew that this is <em>the book</em> to start. I realised what I wanted to learn from physics is not only the physics knowledge itself, but also the physicist's way of thinking, or first-principle reasoning. For that, there is no better book than Feynman lectures. Just like what I learned from attending Feynman 100 conference (by the way, I still owe my readers an article about the conference, if anyone reads my blog, at all :P) and Youtube videos about Feynman, Feynman is a great teacher. He used the simplest words to explain physics. He really hated jargons. Reading Feynman lectures is a pure joy, because I feel I can think like Feynman, I feel smart! I spent about an hour everyday last week in the morning reading Feynman lectures. It was an enjoyable intellectual treat that I haven't had for a really long time. First time after a long while, probably after high school, I felt I could think clearly about some problems and started to question. This is a good start to train my first-principle reasoning. I didn't feel lazy to read the lectures; I actually looked forward to read them. Let's hope this will continue for a while, at least until Christmas? Let's don't be too ambitious. Do it step by step. My next goal to see my next summary/progress post next weekend.</p>
+<h2>Progress Report Structure</h2>
+<p>Because this is the first post of the series, I am going to say a few words about the structure of the progress report I have in mind. First, I will write a brief summary of the chapter. Then I will expand on a few concepts or problems that I found interesting depends on the time I have to think about the problems and/or the time I have to write about them.</p>
+<h2>Summary of Chapter 1</h2>
+<p>In the first chapter, Feynman discussed about his idea about teaching physics, which also reflects his view on physics in general. He discussed why we can't teach physics from basic axioms, why we need to first learn the simpler, "wrong" theory, before learning the more advanced, "right" theory. First, this is the history of physics. We first figured out classical theories to explain our everyday objects and then we figured out strange theories to explain puzzling experimental facts as our knowledge grew and the experimental techniques improved. We don't have the "correct" theory. It is important for students to realise that all theories are only approximations of the "truth". Therefore, it is a good idea to teach classical theories before teaching quantum theories. Another reason is that classical theories are easier to understand because we can understand them from our everyday experience. From there, we can build up our intuition and also our confidence in mathematic description of phenomena so that later on we can have some ground to rely on when things get very strange. In the second part, Feynman outlined our over-all picture of the world. In his opinion, the single most important concept in physics, or even in the entire field of science, is the atomic hypothesis that everything is made of atoms. He used water as an example to illustrate the power of the atomic hypothesis. He explained the different of atomic arrangement of the three phases of water: water, ice and vapour. We can easily understand why water expands in volume when it freezes to become ice: because ice has a hollow structure with a lot of empty space between the atoms. We can also understand why blowing a hot soup can cool it: we blow to move the water vapour on top of the soup so that it will keep evaporating and the evaporating vapour removes heat from the soup. Feynman carried on to explain dissolution and chemical reactions from atomic point of view. This chapter was wonderful. It stimulated me to think about many basic questions in science:</p>
+<ol>
+<li>Why do some substances dissolve less as the temperature increases? (retrograde solubility)</li>
+<li>Why does burning happen? Why do we need ignition to start a fire and how does burning continues after ignition? How are fire (plasma) and light generated from burning?</li>
+<li>How does nose sense smell?</li>
+<li>Why does Brownian motion happen?</li>
+<li>Is everything physical? How can we understand things like consciousness from a physical point of view?</li>
+<li>How to calculate the resolution limit of microscopes? How to calculate the diffraction limit and beat the diffraction limit?</li>
+</ol>
+<p>This week I only have time to dig into the first problem, retrograde solubility. I was particularly interested in this problem because I tried to understand it in high school when I was very good in chemistry and when I was still feeling powerful enough to understand the world by thinking by myself. I thought it would be rewarding to solve a little mystery that puzzled my arrogant young self.</p>
+<h2>Retrograde solubility</h2>
+<p>So, why do some substances dissolve less as the temperature increases? If you search on the internet, you will find an answer based on Le Chatelier principle. Le Chatelier principle tells you that, in a chemical equilibrium, when some changes happen, the system will adjust itself to reverse the change and reach a new equilibrium. Retrograde solubility is found in substances that produce heat when they dissolve, that is, the dissolution process is exothermal. So when the temperature increases, the solubility is reduced because the system want to reduce the heat of the system so as to resist the increase of temperature according to Le Chatelier principle. This is all very intuitive and satisfying but somehow I am not very happy about Le Chatelier principle. It's like Lenz law, Pauli exclusion principle or Hund's rule. These rules all sound like some words came up by some famous scientists. I won't believe them unless you give me proves! So I tried to understand the problem using elementary thermodynamics that I remember. An exothermal dissolution process means the enthalpy of dissolution is negative. (ΔH&lt;0) The fact that the substances can dissolve means dissolution lower the overall energy of the system, that is Gibbs free energy change is negative (ΔG &lt;0)</p>
+<p style="text-align:center;">$latex \Delta G = \Delta H - T \Delta S $</p>
+<p>If ΔS is positive, ΔG become more negative when temperature increases, which means dissolution is more preferred so the solubility increases. Otherwise, if ΔS is negative, the solubility decreases. Put it more formally. In a simple dissolution chemical reaction</p>
+<p style="text-align:center;">$latex AB=A^{+} + B^{-}$</p>
+<p style="text-align:center;">$latex \Delta G = -RT ln K $ where $latex K=[A^+][B^-]$</p>
+<p style="text-align:center;">$latex \partial (\Delta G) / \partial T = -R ln K = - \Delta S $</p>
+<p style="text-align:left;">When ΔS &lt; 0, ΔG increases with temperature, K decreases and so do the concentration of A+ and B-. If ΔH &gt; 0, that is the dissolution absorbs heat, then ΔG is positive when ΔS is negative, in which case dissolution won't happen. Therefore, retrograde solubility only happens when dissolution produces heat. But exothermal dissolution is a necessary condition, not a sufficient condition. For retrograde solubility to happen, we need ΔH &lt; 0 <em>and</em> ΔS &lt; 0. How is it possible that the entropy reduces after dissolution? Entropy is a measure of disorder. A reduction of entropy after dissolution suggests that A+ and B- forms a more ordered structure with the solvent than in the solute A-B form.</p>
+<p>For this part, I haven't found a definite answer. But it seems many sulphates ($latex SO_{4}^{2-}$) and selenates ($latex SeO_{4}^{2-}$) have retrograde solubilities. Sulphur and selenium lie in the same column of the periodic table, so it is understandable that sulphates and selenates have similar properties. I guess somehow $latex SO_{4}^{2-}$ and $latex SeO_{4}^{2-}$ can form large complexes with water molecules. The bonds have large energy combining with high coordination number produce more energy than the energy needed to break $latex SO_{4}^{2-}$ with the cations. And the large $latex H_2 O$ complexes somehow have more organised structure than in the sulphates which reduces the entropy as well. To get a more concrete answer, I will need to dig deeper in the literature. For now, I will stop the analysis here.</p>
+<p>Here is an incomplete list of salts with retrograde solubility according to <a href="https://en.wikipedia.org/wiki/Solubility_table">solubility table on Wikipedia</a>.</p>
+<p>$latex Ca(CH_3 COOH)_2, CaCrO_4, Ca(OH)_2, CaSeO_4, CaSO_4, Ce_2(SeO_4)_3$</p>
+<p>$latex Co(IO_3)_2 \cdot 2H_2 O, Er_2 (SO_4)_3 \cdot 8 H_2 O, Gd_2 (SO_4)_3, Ho_2 (SO_4)_3 \cdot 8H_2O, La_2 (SO_4)_3$</p>
+<p>$latex  LI_2 CO_3, Li_2SeO_3, Li_2 C_4 H_4 O_6, MnSO_4, Nd_2 (SeO_4)_3, Pr_2 (SO_4)_3, Yb_2 (SO_4)_3, Y_2 (SO_4)_3 $</p>
+
+  </div>
+
+  <div class="date">
+    Written on November  6, 2018
+  </div>
+
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'huangjunye';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:h.jun.ye@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/HuangJunye"><i class="svg-icon github"></i></a>
+
+
+
+
+<a href="https://www.twitter.com/HuangJunye"><i class="svg-icon twitter"></i></a>
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-52372886-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/2018/11/06/feynman-lectures-vol-i-chap-1/',
+		  'title': 'Feynman Lectures Vol. I Chap. 1: Atoms in Motion'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>

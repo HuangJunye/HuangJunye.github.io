@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>选量子力学入门书籍 – Huang Junye – Quantum Developer Advocate at IBM Qiskit</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="搞理论物理研究，我决定先从量子力学开始入门。上网搜了很多帖子，比较有口碑的量子力学入门书籍有：
+初级
+
+《量子力学》，曾谨言著
+Feynman Lectures on Physics, Vol III, by Richard Feynman
+Introduction to Quantum Mechanics, by David J. Griffiths
+Quantum Mechanics, by Claude Cohen-Tannoudji
+Principles of Quantum Mechanics, by Ramamurti Shankar
+Quantum Mechanics: An Introduction by Walter Greiner
+
+中级
+
+The Principles of Quantum Mechanics by Paul Dirac
+Quantum Mechanics: Non-Relativistic Theory by Lev Landau
+Modern Quantum Mechanics by Jun John Sakurai
+
+我先看了最有名的Feynman Lectures on Physics, Vol III。这本书应该是上面所有书里头最简单，公式最少的。每一章节都有大量的文字说明，公式密度不是很高。这本书很适合完全没有基础的人入门。我看了前两章，感觉讲得有点啰嗦，有点太慢了，看起来不爽。我想尽快入门。
+我原来有曾谨言的《量子力学》，但是太笨重了，搬家的时候扔了。网上很多人推荐，也有很多人觉得一般。我在新加坡也不太好找这本书，所以就没有看了。
+今天去图书馆翻了另外几本书。
+David J.Griffiths的Introduction to Quantum Mechanics的公式比较多，篇幅比较小。A5大小400多页，好像很多，可是跟其他几本，动辄上千页，分几册的书比起来，绝对是浓缩袖珍版。他在前言里头讲，这本书的目的是教读者“用”量子力学，而不是“理解”量子力学。他觉得不先搞懂怎么“用”量子力学，根本没办法深入“理解”量子力学。这大概就是写这本书背后的哲学，也是这本书篇幅小的秘密。尽管Griffiths说讲“理解”，这本书也并没有只是堆砌公式枯燥无味。就像费恩曼的物理讲义，在这本书的字里行间，我可以感受到Griffiths的睿智，完全没有正统教科书的死板。所以接下来大概是结合《费恩曼物理讲义》第三册和这本书一起看。
+我粗略的翻看了一下Walter Greiner的Quantum Mechanics: An Introduction和Claude Cohen-Tannoudji的Quantum Mechanics。Greiner的书篇幅也很小，也只有四百多页。然而还是略显啰嗦，前面用了5章铺垫，第6章才开始讲薛定谔方程。Griffiths可是第一页就把薛定谔方程祭出来了。Cohen-Tannoudji那本简直是鸿篇巨著，两册加起来超过1500页。仅此一点就注定了这不是我的菜。
+Shankar的那本还没有机会看。后面中级的三本只翻了樱井纯（J.J. Sakurai）那本。这本书短小精悍，薄薄的一本，好像写了很多如何应用量子力学解决现代物理问题的内容。这本书的评价很高，不过现在还看不懂。狄拉克那本被人奉为圣经，有机会一定要去翻翻看。听说用来入门不太合适。朗道的书也是有口皆碑，同样听说不容易读懂不太适合入门。有机会要去翻翻，但是大概短期内不会认真看。
+大家有兴趣的话，可以参考一下这个豆列：量子力學教材：可以信任的，以及不可以信任的
+" />
+    <meta property="og:description" content="搞理论物理研究，我决定先从量子力学开始入门。上网搜了很多帖子，比较有口碑的量子力学入门书籍有：
+初级
+
+《量子力学》，曾谨言著
+Feynman Lectures on Physics, Vol III, by Richard Feynman
+Introduction to Quantum Mechanics, by David J. Griffiths
+Quantum Mechanics, by Claude Cohen-Tannoudji
+Principles of Quantum Mechanics, by Ramamurti Shankar
+Quantum Mechanics: An Introduction by Walter Greiner
+
+中级
+
+The Principles of Quantum Mechanics by Paul Dirac
+Quantum Mechanics: Non-Relativistic Theory by Lev Landau
+Modern Quantum Mechanics by Jun John Sakurai
+
+我先看了最有名的Feynman Lectures on Physics, Vol III。这本书应该是上面所有书里头最简单，公式最少的。每一章节都有大量的文字说明，公式密度不是很高。这本书很适合完全没有基础的人入门。我看了前两章，感觉讲得有点啰嗦，有点太慢了，看起来不爽。我想尽快入门。
+我原来有曾谨言的《量子力学》，但是太笨重了，搬家的时候扔了。网上很多人推荐，也有很多人觉得一般。我在新加坡也不太好找这本书，所以就没有看了。
+今天去图书馆翻了另外几本书。
+David J.Griffiths的Introduction to Quantum Mechanics的公式比较多，篇幅比较小。A5大小400多页，好像很多，可是跟其他几本，动辄上千页，分几册的书比起来，绝对是浓缩袖珍版。他在前言里头讲，这本书的目的是教读者“用”量子力学，而不是“理解”量子力学。他觉得不先搞懂怎么“用”量子力学，根本没办法深入“理解”量子力学。这大概就是写这本书背后的哲学，也是这本书篇幅小的秘密。尽管Griffiths说讲“理解”，这本书也并没有只是堆砌公式枯燥无味。就像费恩曼的物理讲义，在这本书的字里行间，我可以感受到Griffiths的睿智，完全没有正统教科书的死板。所以接下来大概是结合《费恩曼物理讲义》第三册和这本书一起看。
+我粗略的翻看了一下Walter Greiner的Quantum Mechanics: An Introduction和Claude Cohen-Tannoudji的Quantum Mechanics。Greiner的书篇幅也很小，也只有四百多页。然而还是略显啰嗦，前面用了5章铺垫，第6章才开始讲薛定谔方程。Griffiths可是第一页就把薛定谔方程祭出来了。Cohen-Tannoudji那本简直是鸿篇巨著，两册加起来超过1500页。仅此一点就注定了这不是我的菜。
+Shankar的那本还没有机会看。后面中级的三本只翻了樱井纯（J.J. Sakurai）那本。这本书短小精悍，薄薄的一本，好像写了很多如何应用量子力学解决现代物理问题的内容。这本书的评价很高，不过现在还看不懂。狄拉克那本被人奉为圣经，有机会一定要去翻翻看。听说用来入门不太合适。朗道的书也是有口皆碑，同样听说不容易读懂不太适合入门。有机会要去翻翻，但是大概短期内不会认真看。
+大家有兴趣的话，可以参考一下这个豆列：量子力學教材：可以信任的，以及不可以信任的
+" />
+    
+    <meta name="author" content="Huang Junye" />
+
+    
+    <meta property="og:title" content="选量子力学入门书籍" />
+    <meta property="twitter:title" content="选量子力学入门书籍" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Huang Junye - Quantum Developer Advocate at IBM Qiskit" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://github.com/huangjunye.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Huang Junye</a></h1>
+            <p class="site-description">Quantum Developer Advocate at IBM Qiskit</p>
+          </div>
+
+          <nav>
+            <a href="/blog/">Blog</a>
+            <a href="/events">Events</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>选量子力学入门书籍</h1>
+
+  <div class="entry">
+    <p>搞理论物理研究，我决定先从量子力学开始入门。上网搜了很多帖子，比较有口碑的量子力学入门书籍有：</p>
+<p>初级</p>
+<ol>
+<li><a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1117670/" target="_blank" rel="nofollow noreferrer noopener">《量子力学》<i class="icon-external"></i></a>，曾谨言著</li>
+<li><a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1683152/" target="_blank" rel="nofollow noreferrer noopener">Feynman Lectures on Physics, Vol III<i class="icon-external"></i></a>, by <b>Richard Feynman</b></li>
+<li><a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1706283/" target="_blank" rel="nofollow noreferrer noopener">Introduction to Quantum Mechanics<i class="icon-external"></i></a>, by <b>David J. Griffiths</b></li>
+<li><a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1475261/" target="_blank" rel="nofollow noreferrer noopener">Quantum Mechanics<i class="icon-external"></i></a>, by <b>Claude Cohen-Tannoudji</b></li>
+<li><a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1463269/" target="_blank" rel="nofollow noreferrer noopener">Principles of Quantum Mechanics<i class="icon-external"></i></a>, by <b>Ramamurti Shankar</b></li>
+<li><a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1663172/" target="_blank" rel="nofollow noreferrer noopener">Quantum Mechanics: An Introduction<i class="icon-external"></i></a> by <b>Walter Greiner</b></li>
+</ol>
+<p>中级</p>
+<ol>
+<li><a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1448785/" target="_blank" rel="nofollow noreferrer noopener">The Principles of Quantum Mechanics<i class="icon-external"></i></a> by <b>Paul Dirac</b></li>
+<li><a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/3269798/" target="_blank" rel="nofollow noreferrer noopener">Quantum Mechanics: Non-Relativistic Theory<i class="icon-external"></i></a> by<b> Lev Landau</b></li>
+<li><a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1410562/" target="_blank" rel="nofollow noreferrer noopener">Modern Quantum Mechanics<i class="icon-external"></i></a> by <b>Jun John Sakurai</b></li>
+</ol>
+<p>我先看了最有名的<a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1683152/" target="_blank" rel="nofollow noreferrer noopener">Feynman Lectures on Physics, Vol III<i class="icon-external"></i></a>。这本书应该是上面所有书里头最简单，公式最少的。每一章节都有大量的文字说明，公式密度不是很高。这本书很适合完全没有基础的人入门。我看了前两章，感觉讲得有点啰嗦，有点太慢了，看起来不爽。我想尽快入门。</p>
+<p>我原来有曾谨言的<a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1117670/" target="_blank" rel="nofollow noreferrer noopener">《量子力学》<i class="icon-external"></i></a>，但是太笨重了，搬家的时候扔了。网上很多人推荐，也有很多人觉得一般。我在新加坡也不太好找这本书，所以就没有看了。</p>
+<p>今天去图书馆翻了另外几本书。</p>
+<p>David J.Griffiths的<a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1706283/" target="_blank" rel="nofollow noreferrer noopener">Introduction to Quantum Mechanics<i class="icon-external"></i></a>的公式比较多，篇幅比较小。A5大小400多页，好像很多，可是跟其他几本，动辄上千页，分几册的书比起来，绝对是浓缩袖珍版。他在前言里头讲，这本书的目的是教读者“用”量子力学，而不是“理解”量子力学。他觉得不先搞懂怎么“用”量子力学，根本没办法深入“理解”量子力学。这大概就是写这本书背后的哲学，也是这本书篇幅小的秘密。尽管Griffiths说讲“理解”，这本书也并没有只是堆砌公式枯燥无味。就像费恩曼的物理讲义，在这本书的字里行间，我可以感受到Griffiths的睿智，完全没有正统教科书的死板。所以接下来大概是结合《费恩曼物理讲义》第三册和这本书一起看。</p>
+<p>我粗略的翻看了一下Walter Greiner的<a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1663172/" target="_blank" rel="nofollow noreferrer noopener">Quantum Mechanics: An Introduction<i class="icon-external"></i></a>和Claude Cohen-Tannoudji的<a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/subject/1475261/" target="_blank" rel="nofollow noreferrer noopener">Quantum Mechanics<i class="icon-external"></i></a>。Greiner的书篇幅也很小，也只有四百多页。然而还是略显啰嗦，前面用了5章铺垫，第6章才开始讲薛定谔方程。Griffiths可是第一页就把薛定谔方程祭出来了。Cohen-Tannoudji那本简直是鸿篇巨著，两册加起来超过1500页。仅此一点就注定了这不是我的菜。</p>
+<p>Shankar的那本还没有机会看。后面中级的三本只翻了樱井纯（J.J. Sakurai）那本。这本书短小精悍，薄薄的一本，好像写了很多如何应用量子力学解决现代物理问题的内容。这本书的评价很高，不过现在还看不懂。狄拉克那本被人奉为圣经，有机会一定要去翻翻看。听说用来入门不太合适。朗道的书也是有口皆碑，同样听说不容易读懂不太适合入门。有机会要去翻翻，但是大概短期内不会认真看。</p>
+<p>大家有兴趣的话，可以参考一下这个豆列：<a class=" wrap external" href="http://link.zhihu.com/?target=http%3A//book.douban.com/doulist/29945/" target="_blank" rel="nofollow noreferrer noopener">量子力學教材：可以信任的，以及不可以信任的</a></p>
+
+  </div>
+
+  <div class="date">
+    Written on July  5, 2014
+  </div>
+
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'huangjunye';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:h.jun.ye@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/HuangJunye"><i class="svg-icon github"></i></a>
+
+
+
+
+<a href="https://www.twitter.com/HuangJunye"><i class="svg-icon twitter"></i></a>
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-52372886-1', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/2014/07/05/%e9%80%89%e9%87%8f%e5%ad%90%e5%8a%9b%e5%ad%a6%e5%85%a5%e9%97%a8%e4%b9%a6%e7%b1%8d/',
+		  'title': '选量子力学入门书籍'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>
